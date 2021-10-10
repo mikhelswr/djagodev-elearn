@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body {
+    background-color: #fffcf6;
+    scroll-behavior: smooth;
+}
+.text-bold {
+    font-weight: 700;
+}
+.text-medium {
+    font-weight: 500;
+}
+.text-reguler {
+    font-weight: 400;
+}
+.text-light {
+    font-weight: 300;
+}
+
+.sideText {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fb7192;
+}
+.headerTitle {
+    font-weight: 700;
+}
+
+.center {
+    text-align: center;
+}
+.icon {
+    margin-left: 5px;
+}
+.card-flex {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.button {
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.btnPrimary:hover {
+    background-color: #3835e5;
+}
+.btnPrimary {
+    background-color: #c3c2cb;
+    color: #ffffff;
+}
+.btnSecondary {
+    background-color: #3835e5;
+    color: #ffffff;
+}
+.btnSecondary:hover {
+    background-color: #302ec9;
+}
+
+section {
+    margin: 100px 0 70px;
+    padding: 0 70px;
+}
+section.mt {
+    margin: 50px 0 70px;
+}
+.sectionText {
+    width: 400px;
+}
+.sectionText h2 {
+    font-size: 1.7rem;
+}
+.sectionContent {
+    display: flex;
+    margin-top: 50px;
+}
+.sectionContent.fd {
+    flex-direction: column;
+    margin-top: 30px;
+}
+@media (max-width: 1024px) {
+    section {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 425px) {
+    section {
+        margin: 70px 0;
+        padding: 0 30px;
+    }
+    .sectionText {
+        width: 100%;
+    }
+}
+
+.ma {
+    margin: auto;
+}
+.jcc {
+    justify-content: center;
+}

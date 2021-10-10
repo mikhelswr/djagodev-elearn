@@ -1,0 +1,49 @@
+section.top {
+    margin: 50px 0 70px;
+}
+.sectionText.flex {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.inputButton {
+    min-width: 500px;
+    position: relative;
+    width: 50%;
+    margin-top: 40px;
+}
+.inputButton input {
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 30px;
+    outline: none;
+    color: rgb(109, 109, 109);
+    border: 2px solid #0400af21;
+}
+.inputButton button {
+    height: 40px;
+    padding: 0 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border-radius: 30px;
+    color: white;
+    background-color: #3835e5;
+    border: none;
+    text-align: left;
+}
+@media (max-width: 425px) {
+    .inputButton {
+        min-width: 0;
+        width: 100%;
+        position: relative;
+    }
+}

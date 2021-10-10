@@ -1,0 +1,305 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 70px;
+    transform: translateY(-40px);
+}
+.headerText {
+    width: 45%;
+    transform: translateY(-30px);
+}
+.headerText h1 {
+    margin-bottom: 25px;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #3835e5;
+}
+.headerText .description {
+    margin-bottom: 70px;
+    width: 90%;
+    letter-spacing: 0.13em;
+    line-height: 25px;
+    color: rgba(3, 0, 175, 0.5);
+}
+.headerImage {
+    width: 55%;
+    display: flex;
+    justify-content: flex-end;
+}
+.headerImage img {
+    width: 100%;
+}
+@media (max-width: 1024px) {
+    .header {
+        padding: 0 50px;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    .header {
+        transform: translateY(10px);
+    }
+    .headerText {
+        width: 60%;
+        transform: translateY(10px);
+    }
+    .headerText .description {
+        margin-bottom: 50px;
+        width: 100%;
+    }
+}
+@media (max-width: 425px) {
+    .header {
+        align-items: center;
+        flex-direction: column-reverse;
+        padding: 0 30px;
+    }
+    .headerText,
+    .headerImage {
+        width: 100%;
+    }
+    .headerText h1 {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================================== */
+
+.partner {
+    padding: 0 70px;
+}
+.partner img {
+    width: 175px;
+    height: auto;
+    opacity: 0.5;
+}
+.partner img:hover {
+    opacity: 1;
+}
+@media (max-width: 1024px) {
+    .partner {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 768px) {
+    .partner {
+        margin-top: 70px;
+        padding: 0 50px;
+    }
+    .partner img {
+        width: 100px;
+    }
+}
+@media (max-width: 425px) {
+    .partner {
+        padding: 0;
+    }
+    .partner img {
+        width: 75px;
+    }
+}
+
+/* =========================================================== */
+
+/* Skill Impian */
+
+.cardContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cardKelas {
+    width: 295px;
+    height: 280px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 20px;
+    background-color: #ffffff;
+    color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 4px 10px 0px rgba(4, 0, 175, 0.1);
+}
+.cardHeader {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.cardHeader img {
+    height: 100%;
+}
+.cardKelas h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.cardKelas a {
+    zoom: 1.3;
+}
+.cardKelas.primary {
+    background-color: #6f6cff;
+    color: #ffffff;
+    box-shadow: 0px 4px 25px 0px rgba(4, 0, 175, 0.15);
+}
+.cardKelas.primary a {
+    color: #ffffff;
+}
+@keyframes leftright {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.cardKelas:hover a {
+    animation-name: leftright;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@media (max-width: 1024px) {
+    .cardContainer {
+        flex-wrap: wrap;
+    }
+    .cardKelas {
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 425px) {
+    .cardContainer {
+        justify-content: center;
+    }
+}
+
+/* =========================================================== */
+
+/* Kenapa Harus Kami */
+.sectionFlex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transform: translateY(-50px);
+}
+.accordion {
+    width: 50%;
+    height: fit-content;
+    padding-left: 10px;
+}
+.accordion p {
+    line-height: 25px;
+}
+.accordion .accordionList {
+    width: 100%;
+    padding: 10px 0;
+}
+.accordion .label {
+    position: relative;
+    padding: 15px 0;
+    margin-right: 10px;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    line-height: 30px;
+}
+.accordion .label::before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.accordion .content {
+    width: 90%;
+    height: 0;
+    overflow: hidden;
+    transition: 0.7s;
+}
+.accordion .accordionList.active .content {
+    height: 50px;
+}
+.accordion .accordionList.active .label::before {
+    content: "-";
+}
+.contentImage {
+    width: 50%;
+}
+.contentImage img {
+    width: 100%;
+}
+@media (max-width: 1024px) {
+    .sectionFlex {
+        transform: translateY(-40px);
+    }
+    .accordion {
+        padding-left: 0;
+    }
+    .accordion .label::before {
+        content: "+";
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+    }
+    .accordion .label {
+        padding: 10px 0;
+    }
+}
+@media (max-width: 768px) {
+    .sectionFlex {
+        transform: translateY(-40px);
+    }
+    .accordion {
+        padding-top: 15px;
+    }
+    .accordion .accordionList {
+        padding: 5px 0;
+    }
+}
+@media (max-width: 425px) {
+    .sectionFlex {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .accordion {
+        width: 100%;
+        padding-top: 0;
+    }
+    .contentImage {
+        width: 100%;
+    }
+}
+
+/* =========================================================== */
+
+/* Fun Fact */
+.sectionContent .data {
+    width: 50%;
+    margin: 20px auto 0;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.side {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #3835e5;
+    margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+    .sectionContent .data {
+        width: 75%;
+    }
+    .contentImage.jcc {
+        width: 75%;
+    }
+}
+@media (max-width: 425px) {
+    .sectionContent .data {
+        width: 100%;
+    }
+    .contentImage.jcc {
+        width: 100%;
+    }
+}

@@ -1,0 +1,189 @@
+.card {
+    width: 290px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 10px 0px #0400af1a;
+}
+.card .image {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    border-radius: 12px;
+}
+.card .image img {
+    width: 100%;
+}
+.card h4 {
+    font-size: 1.5rem;
+    height: 60px;
+    color: #000000cc;
+}
+
+.card .price {
+    display: flex;
+    height: 20px;
+    margin: 5px 0;
+}
+.card .price .realPrice {
+    color: #fb7192;
+    margin-left: 10px;
+    text-decoration: line-through;
+    animation-name: showhidden;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+.card .details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0;
+}
+.card .details .time,
+.card .details .episode,
+.card .details .difficult {
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.card .details .icon {
+    margin-left: 0;
+    margin-right: 3px;
+}
+.card .rating {
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+}
+.card .rating p {
+    margin-left: 10px;
+}
+.star {
+    color: #fede3c;
+}
+
+@keyframes showhidden {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ================================================== */
+
+.cardTesti {
+    width: 30%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 10px 0px rgba(4, 0, 175, 0.1);
+}
+
+.cardTesti .cardColumn {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-size: 1.5rem;
+    line-height: 25px;
+}
+.profesion {
+    line-height: 22px;
+    margin-bottom: 25px;
+    color: #c3c2cb;
+}
+.testi {
+    font-size: 1.1rem;
+}
+@media (max-width: 1024px) {
+    .cardTesti {
+        min-width: 400px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .cardTesti {
+        min-width: 80%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 425px) {
+    .cardTesti {
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* ================================================== */
+
+.flexEvent {
+    display: flex;
+    justify-content: center;
+}
+.cardEvent {
+    width: 45%;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 10px 0px rgba(4, 0, 175, 0.1);
+}
+.cardEvent .img {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.cardEvent img {
+    width: 100%;
+}
+.cardEvent .title {
+    font-size: 1.5rem;
+    color: #3835e5;
+    margin-top: 15px;
+    line-height: 30px;
+}
+.cardEvent .organizer {
+    margin-top: 15px;
+}
+.cardEvent .description {
+    margin-top: 15px;
+    line-height: 25px;
+}
+.cardEvent .info {
+    display: flex;
+    padding: 10px;
+    margin-top: 30px;
+    justify-content: space-between;
+    border-radius: 15px;
+    background: rgba(4, 0, 175, 0.1);
+}
+@media (max-width: 1024px) {
+    .flexEvent {
+        justify-content: space-between;
+    }
+}
+@media (max-width: 768px) {
+    .cardEvent {
+        width: 50%;
+    }
+}
+@media (max-width: 425px) {
+    .flexEvent {
+        flex-direction: column;
+    }
+    .cardEvent {
+        width: 100%;
+    }
+}
