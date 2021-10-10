@@ -62,6 +62,13 @@
 .dropdownContent .dropCard .content {
     margin-left: 15px;
 }
+.dropCard .title {
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 30px;
+}
+.dropCard .desc {
+    color: rgba(195, 194, 203, 1);
+}
 .dropdownContent.dflex {
     display: flex;
 }

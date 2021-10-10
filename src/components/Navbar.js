@@ -1,7 +1,6 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
-import { NavLink, Link, useLocation } from "react-router-dom";
 import dropdownKoding from "../assets/dropdown-koding.png";
 import dropdownBahasa from "../assets/dropdown-bahasa.png";
 import dropdownDesain from "../assets/dropdown-desain.png";
@@ -13,6 +12,11 @@ import "../styles/navbar.css";
 
 function Navbar() {
     let location = useLocation();
+
+    useEffect(() => {
+        console.log(location);
+    });
+
     const dropdown = () => {
         document.querySelector(".dropdownContent").classList.toggle("dflex");
     };
@@ -31,88 +35,101 @@ function Navbar() {
                                     ? "link active"
                                     : "link"
                             }
-                            to='/kelas'
                             onClick={() => dropdown()}
                         >
                             Kelas <BiDownArrow className='icon' />
                         </div>
                         <div className='dropdownContent'>
-                            <Link to='/class'>
-                                <div className='dropCard'>
-                                    <img src={dropdownKoding} alt='' />
-                                    <div className='content'>
-                                        <p className='text-bold'>
-                                            Kelas Koding
-                                        </p>
-                                        <p className='text-light'>
-                                            Aplikasi & Website
-                                        </p>
-                                    </div>
-                                </div>
-                            </Link>
-                            <Link to='/class'>
-                                <div className='dropCard'>
-                                    <img src={dropdownSemua} alt='' />
-                                    <div className='content'>
-                                        <p className='text-bold'>Semua Kelas</p>
-                                        <p className='text-light'>
-                                            Cari kelas impian
-                                        </p>
-                                    </div>
-                                </div>
-                            </Link>
-                            <Link to='/class'>
-                                <div className='dropCard'>
-                                    <img src={dropdownDesain} alt='' />
-                                    <div className='content'>
-                                        <p className='text-bold'>
-                                            Kelas Desain
-                                        </p>
-                                        <p className='text-light'>
-                                            Desain Grafis & UI/UX
-                                        </p>
-                                    </div>
-                                </div>
-                            </Link>
-                            <NavLink>
-                                <div to='/class' className='dropCard'>
-                                    <img src={dropdownPath} alt='' />
-                                    <div className='content'>
-                                        <p className='text-bold'>
-                                            Learning Path
-                                        </p>
-                                        <p className='text-light'>
-                                            Belajar mudah dan terarah
-                                        </p>
-                                    </div>
+                            <NavLink
+                                to='/class'
+                                className='dropCard'
+                                onClick={() => dropdown()}
+                            >
+                                <img src={dropdownKoding} alt='' />
+                                <div className='content'>
+                                    <p className='text-bold title'>
+                                        Kelas Koding
+                                    </p>
+                                    <p className='text-light desc'>
+                                        Aplikasi & Website
+                                    </p>
                                 </div>
                             </NavLink>
-                            <Link to='/class'>
-                                <div className='dropCard'>
-                                    <img src={dropdownBahasa} alt='' />
-                                    <div className='content'>
-                                        <p className='text-bold'>
-                                            Kelas Bahasa
-                                        </p>
-                                        <p className='text-light'>
-                                            Inggris, Jepang & Korea
-                                        </p>
-                                    </div>
+                            <NavLink
+                                to='/class'
+                                className='dropCard'
+                                onClick={() => dropdown()}
+                            >
+                                <img src={dropdownSemua} alt='' />
+                                <div className='content'>
+                                    <p className='text-bold title'>
+                                        Semua Kelas
+                                    </p>
+                                    <p className='text-light desc'>
+                                        Cari kelas impian
+                                    </p>
                                 </div>
-                            </Link>
-                            <Link to='/class'>
-                                <div className='dropCard'>
-                                    <img src={dropdownBiaya} alt='' />
-                                    <div className='content'>
-                                        <p className='text-bold'>
-                                            Benefit & Biaya
-                                        </p>
-                                        <p className='text-light'>
-                                            Benefit & biaya mulai dari Rp. 0
-                                        </p>
-                                    </div>
+                            </NavLink>
+                            <NavLink
+                                to='/class'
+                                className='dropCard'
+                                onClick={() => dropdown()}
+                            >
+                                <img src={dropdownDesain} alt='' />
+                                <div className='content'>
+                                    <p className='text-bold title'>
+                                        Kelas Desain
+                                    </p>
+                                    <p className='text-light desc'>
+                                        Desain Grafis & UI/UX
+                                    </p>
                                 </div>
-                            </Link>
+                            </NavLink>
+                            <NavLink
+                                to='/class'
+                                className='dropCard'
+                                onClick={() => dropdown()}
+                            >
+                                <img src={dropdownPath} alt='' />
+                                <div className='content'>
+                                    <p className='text-bold title'>
+                                        Learning Path
+                                    </p>
+                                    <p className='text-light desc'>
+                                        Belajar mudah dan terarah
+                                    </p>
+                                </div>
+                            </NavLink>
+                            <NavLink
+                                to='/class'
+                                className='dropCard'
+                                onClick={() => dropdown()}
+                            >
+                                <img src={dropdownBahasa} alt='' />
+                                <div className='content'>
+                                    <p className='text-bold title'>
+                                        Kelas Bahasa
+                                    </p>
+                                    <p className='text-light desc'>
+                                        Inggris, Jepang & Korea
+                                    </p>
+                                </div>
+                            </NavLink>
+                            <NavLink
+                                to='/class'
+                                className='dropCard'
+                                onClick={() => dropdown()}
+                            >
+                                <img src={dropdownBiaya} alt='' />
+                                <div className='content'>
+                                    <p className='text-bold title'>
+                                        Benefit & Biaya
+                                    </p>
+                                    <p className='text-light desc'>
+                                        Benefit & biaya mulai dari Rp. 0
+                                    </p>
+                                </div>
+                            </NavLink>
                         </div>
                     </div>
                     <NavLink

@@ -95,17 +95,18 @@
     margin-bottom: 10px;
 }
 
-.name {
+.cardTesti .name {
     font-size: 1.5rem;
     line-height: 25px;
 }
-.profesion {
+.cardTesti .profesion {
     line-height: 22px;
     margin-bottom: 25px;
     color: #c3c2cb;
 }
-.testi {
+.cardTesti .testi {
     font-size: 1.1rem;
+    line-height: 25px;
 }
 @media (max-width: 1024px) {
     .cardTesti {
