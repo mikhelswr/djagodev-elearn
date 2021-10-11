@@ -4,6 +4,7 @@ import logo from "../assets/logo.png";
 import logoUNS from "../assets/logo_UNS.png";
 import logoMikroptik from "../assets/logo_MikroptikUNS.png";
 import logoBytefests from "../assets/logo_Bytesfest.png";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
     return (
@@ -19,15 +20,15 @@ function Footer() {
                 <div className='col colFlex'>
                     <div className='colChild'>
                         <h4 className='text-medium'>Kelas</h4>
-                        <a href='#desain'>Kelas Desain</a>
-                        <a href='#koding'>Kelas Koding</a>
-                        <a href='#bahasa'>Kelas Bahasa</a>
+                        <NavLink to='/class'>Kelas Desain</NavLink>
+                        <NavLink to='/class'>Kelas Koding</NavLink>
+                        <NavLink to='/class'>Kelas Bahasa</NavLink>
                     </div>
                     <div className='colChild'>
                         <h4 className='text-medium'>Explore</h4>
-                        <a href='#cariKelas'>Cari Kelas</a>
-                        <a href='#learningPath'>Learning Path</a>
-                        <a href='#class'>Semua Kelas</a>
+                        <NavLink to='/class'>Cari Kelas</NavLink>
+                        <NavLink to='/class'>Learning Path</NavLink>
+                        <NavLink to='/class'>Semua Kelas</NavLink>
                     </div>
                     <div className='colChild'>
                         <h4 className='text-medium'>Tentang Kami</h4>
@@ -48,10 +49,10 @@ function Footer() {
             <div className='footer'>
                 <div className='col'>
                     <div className='link'>
-                        <a href='#home'>Home</a>
-                        <a href='#class'>Kelas</a>
-                        <a href='#challenge'>Challenge</a>
-                        <a href='#event'>Event</a>
+                        <NavLink to='/'>Home</NavLink>
+                        <NavLink to='/class'>Kelass</NavLink>
+                        <NavLink to='/challenge'>Challenge</NavLink>
+                        <NavLink to='/event'>Event</NavLink>
                     </div>
                 </div>
                 <div className='col cr'>

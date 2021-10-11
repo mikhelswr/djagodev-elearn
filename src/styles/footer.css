@@ -33,6 +33,7 @@
 .footerDesc .colFlex a {
     line-height: 25px;
     color: #000000cc;
+    transition: 0.5s;
 }
 .footerDesc .colChild {
     width: 33.3%;
@@ -40,12 +41,15 @@
     display: flex;
     flex-direction: column;
 }
-@media (max-width: 1024px) {
+.footerDesc .colFlex a:hover {
+    color: #3835e5;
+}
+@media (max-width: 1050px) {
     .col {
         padding: 50px 50px 30px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .footerDesc {
         flex-direction: column;
     }
@@ -57,7 +61,7 @@
         padding: 20px 50px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .col {
         padding: 50px 50px 30px;
     }
@@ -91,6 +95,10 @@
 }
 .footer .col .link a {
     color: rgba(0, 0, 0, 0.8);
+    transition: 0.5s;
+}
+.footer .col .link a:hover {
+    color: #3835e5;
 }
 .footer .support {
     padding: 10px 50px;
@@ -106,7 +114,7 @@
     margin-right: 10px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .footer .col {
         padding: 20px 50px 30px;
     }
@@ -118,7 +126,7 @@
         margin-top: 10px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .footer {
         flex-direction: column;
         align-items: initial;
@@ -142,7 +150,7 @@
         bottom: -3px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .footer {
         flex-direction: column;
         align-items: initial;

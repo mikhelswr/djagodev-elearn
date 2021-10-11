@@ -50,6 +50,7 @@
     width: 40%;
     display: flex;
     align-items: center;
+    margin-bottom: 7px;
 }
 .card .details .icon {
     margin-left: 0;
@@ -98,6 +99,7 @@
 .cardTesti .name {
     font-size: 1.5rem;
     line-height: 25px;
+    margin: 7px 0;
 }
 .cardTesti .profesion {
     line-height: 22px;
@@ -108,19 +110,19 @@
     font-size: 1.1rem;
     line-height: 25px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .cardTesti {
         min-width: 400px;
         margin-bottom: 20px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .cardTesti {
         min-width: 80%;
         margin-bottom: 20px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .cardTesti {
         min-width: 100%;
         margin-bottom: 20px;
@@ -170,17 +172,17 @@
     border-radius: 15px;
     background: rgba(4, 0, 175, 0.1);
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .flexEvent {
         justify-content: space-between;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .cardEvent {
         width: 50%;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .flexEvent {
         flex-direction: column;
     }

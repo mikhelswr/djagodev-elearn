@@ -5,6 +5,7 @@
     font-size: 16px;
     text-decoration: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
     background-color: #fffcf6;
@@ -21,6 +22,10 @@ body {
 }
 .text-light {
     font-weight: 300;
+}
+.font-description {
+    font-family: "Nunito", sans-serif;
+    font-weight: 400;
 }
 
 .sideText {
@@ -52,6 +57,7 @@ body {
     font-weight: 700;
     display: flex;
     align-items: center;
+    transition: 0.5s;
 }
 .btnPrimary:hover {
     background-color: #3835e5;
@@ -89,12 +95,12 @@ section.mt {
     flex-direction: column;
     margin-top: 30px;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     section {
         padding: 0 50px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     section {
         margin: 70px 0;
         padding: 0 30px;

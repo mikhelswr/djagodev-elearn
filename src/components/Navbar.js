@@ -7,7 +7,7 @@ import dropdownDesain from "../assets/dropdown-desain.png";
 import dropdownPath from "../assets/dropdown-path.png";
 import dropdownBiaya from "../assets/dropdown-biaya.png";
 import dropdownSemua from "../assets/dropdown-semua.png";
-import { BiDownArrow } from "react-icons/bi";
+import { IoIosArrowDown } from "react-icons/io";
 import "../styles/navbar.css";
 
 function Navbar() {
@@ -20,11 +20,14 @@ function Navbar() {
     const dropdown = () => {
         document.querySelector(".dropdownContent").classList.toggle("dflex");
     };
+    const removeDropdown = () => {
+        document.querySelector(".dropdownContent").classList.remove("dflex");
+    };
 
     return (
         <nav className='navbar'>
             <div className='navMenu'>
-                <NavLink to='/'>
+                <NavLink to='/' onClick={() => removeDropdown()}>
                     <img className='navTitle' src={logo} alt='' />
                 </NavLink>
                 <div className='navLink'>
@@ -37,7 +40,7 @@ function Navbar() {
                             }
                             onClick={() => dropdown()}
                         >
-                            Kelas <BiDownArrow className='icon' />
+                            Kelas <IoIosArrowDown className='icon' />
                         </div>
                         <div className='dropdownContent'>
                             <NavLink
@@ -136,6 +139,7 @@ function Navbar() {
                         to='/challenge'
                         className='link'
                         activeClassName='active'
+                        onClick={() => removeDropdown()}
                         exact
                     >
                         Challenge
@@ -144,17 +148,19 @@ function Navbar() {
                         to='/event'
                         className='link'
                         activeClassName='active'
+                        onClick={() => removeDropdown()}
                         exact
                     >
                         Event
                     </NavLink>
                     <NavLink
-                        to='/about'
+                        to='/!'
                         className='link'
                         activeClassName='active'
+                        onClick={() => removeDropdown()}
                         exact
                     >
-                        About
+                        Tentang Kami
                     </NavLink>
                 </div>
             </div>

@@ -30,6 +30,11 @@
     user-select: none;
     cursor: pointer;
     color: #c3c2cb;
+    transition: 0.5s;
+}
+.navLink .link:hover {
+    color: #3835e5;
+    font-weight: 500;
 }
 .link.active {
     color: #3835e5;
@@ -43,7 +48,7 @@
     min-width: 800px;
     height: fit-content;
     padding: 20px 0;
-    display: none;
+    display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
     position: absolute;
@@ -52,6 +57,9 @@
     background-color: #ffffff;
     z-index: 1;
     box-shadow: 0px 4px 10px #0400af1a;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, 0.5s;
 }
 .dropdownContent .dropCard {
     display: flex;
@@ -59,21 +67,27 @@
     margin: 15px 0;
     align-items: center;
 }
+.dropdownContent .dropCard:hover .title {
+    color: #3835e5;
+}
 .dropdownContent .dropCard .content {
     margin-left: 15px;
 }
 .dropCard .title {
     color: rgba(0, 0, 0, 0.8);
     line-height: 30px;
+    transition: 0.5s;
 }
 .dropCard .desc {
     color: rgba(195, 194, 203, 1);
 }
 .dropdownContent.dflex {
     display: flex;
+    visibility: visible;
+    opacity: 1;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .navbar {
         padding: 0 50px;
     }
@@ -85,7 +99,7 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .navMenu {
         width: 60%;
     }
@@ -101,7 +115,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .navbar {
         padding: 0 30px;
     }

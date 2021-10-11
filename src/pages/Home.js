@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Card, CardTesti } from "../components/Card";
-import { BiRightArrow } from "react-icons/bi";
+import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
 import "swiper/swiper-bundle.min.css";
 import "../styles/pages/home.css";
 
@@ -43,13 +43,14 @@ function Home() {
                     <h1 className='headerTitle'>
                         KUASAI SKILL IMPIAN HANYA DALAM 3 BULAN
                     </h1>
-                    <p className='description'>
+                    <p className='description font-description'>
                         Belajar terarah, jadi profresional bukanlah sekedar
                         mimpi. Kamu tak akan kehilangan arah, pilih learning
                         path dan jadilah profresional
                     </p>
                     <button className='button btnSecondary'>
-                        Akses 3 Bulan GRATIS! <BiRightArrow className='icon' />
+                        Akses 3 Bulan GRATIS!{" "}
+                        <IoIosArrowDown className='icon' />
                     </button>
                 </div>
                 <div className='headerImage'>
@@ -99,8 +100,8 @@ function Home() {
                         <div className='cardKelas primary'>
                             <div className='cardHeader'>
                                 <img src={lpath} alt='' />
-                                <a href='/lanjut'>
-                                    <BiRightArrow className='headerTitle' />
+                                <a href='/#'>
+                                    <IoIosArrowForward className='headerTitle' />
                                 </a>
                             </div>
                             <div className='cardDescription'>
@@ -113,8 +114,8 @@ function Home() {
                         <div className='cardKelas '>
                             <div className='cardHeader'>
                                 <img src={koding} alt='' />
-                                <a href='/lanjut'>
-                                    <BiRightArrow className='headerTitle' />
+                                <a href='/#'>
+                                    <IoIosArrowForward className='headerTitle' />
                                 </a>
                             </div>
                             <div className='cardDescription'>
@@ -127,8 +128,8 @@ function Home() {
                         <div className='cardKelas '>
                             <div className='cardHeader'>
                                 <img src={desain} alt='' />
-                                <a href='/lanjut'>
-                                    <BiRightArrow className='headerTitle' />
+                                <a href='/#'>
+                                    <IoIosArrowForward className='headerTitle' />
                                 </a>
                             </div>
                             <div className='cardDescription'>
@@ -141,8 +142,8 @@ function Home() {
                         <div className='cardKelas '>
                             <div className='cardHeader'>
                                 <img src={bahasa} alt='' />
-                                <a href='/lanjut'>
-                                    <BiRightArrow className='headerTitle' />
+                                <a href='/#'>
+                                    <IoIosArrowForward className='headerTitle' />
                                 </a>
                             </div>
                             <div className='cardDescription'>
@@ -172,7 +173,7 @@ function Home() {
                                 <h3 className='label'>
                                     Kurikulum berstandar industri internasional
                                 </h3>
-                                <p className='content'>
+                                <p className='content font-description'>
                                     kelas dalam platform ini kamu buat dengan
                                     kerjasama industri untuk menyesuaikan
                                     kebutuhan saat ini
@@ -185,7 +186,7 @@ function Home() {
                                 <h3 className='label'>
                                     Belajar sesuai learning path
                                 </h3>
-                                <p className='content'>
+                                <p className='content font-description'>
                                     Belajar terstruktur dan terarah untuk
                                     menjadi profresional, telah di desain sesuai
                                     alur yang ada
@@ -196,7 +197,7 @@ function Home() {
                                 onClick={clickAccordion}
                             >
                                 <h3 className='label'>Komunitas yang besar</h3>
-                                <p className='content'>
+                                <p className='content font-description'>
                                     Komunitas dapat membantu siswa untuk
                                     meningkatkan ketrampilannya
                                 </p>
@@ -209,7 +210,7 @@ function Home() {
                                     Langsung direview oleh profresional
                                     dibidangnya
                                 </h3>
-                                <p className='content'>
+                                <p className='content font-description'>
                                     Project kelas akan direview langsung oleh
                                     praktisi yang mahir dibidangnya
                                 </p>

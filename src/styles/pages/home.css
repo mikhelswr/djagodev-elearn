@@ -30,13 +30,13 @@
 .headerImage img {
     width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .header {
         padding: 0 50px;
         transform: translateY(0);
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .header {
         transform: translateY(10px);
     }
@@ -49,7 +49,7 @@
         width: 100%;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .header {
         align-items: center;
         flex-direction: column-reverse;
@@ -77,12 +77,12 @@
 .partner img:hover {
     opacity: 1;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .partner {
         padding: 0 50px;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .partner {
         margin-top: 70px;
         padding: 0 50px;
@@ -91,7 +91,7 @@
         width: 100px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .partner {
         padding: 0;
     }
@@ -133,16 +133,22 @@
 .cardKelas h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
+    transition: 0.5s;
 }
 .cardKelas a {
     zoom: 1.3;
+    color: #6f6cff;
+}
+.cardKelas:hover h3 {
+    color: #6f6cff;
 }
 .cardKelas.primary {
     background-color: #6f6cff;
     color: #ffffff;
     box-shadow: 0px 4px 25px 0px rgba(4, 0, 175, 0.15);
 }
-.cardKelas.primary a {
+.cardKelas.primary a,
+.cardKelas.primary:hover h3 {
     color: #ffffff;
 }
 @keyframes leftright {
@@ -158,7 +164,7 @@
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .cardContainer {
         flex-wrap: wrap;
     }
@@ -166,7 +172,7 @@
         margin-bottom: 20px;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .cardContainer {
         justify-content: center;
     }
@@ -227,7 +233,7 @@
 .contentImage img {
     width: 100%;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1050px) {
     .sectionFlex {
         transform: translateY(-40px);
     }
@@ -245,7 +251,7 @@
         padding: 10px 0;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .sectionFlex {
         transform: translateY(-40px);
     }
@@ -256,7 +262,7 @@
         padding: 5px 0;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .sectionFlex {
         display: flex;
         flex-direction: column-reverse;
@@ -287,7 +293,7 @@
     color: #3835e5;
     margin-bottom: 15px;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .sectionContent .data {
         width: 75%;
     }
@@ -295,7 +301,7 @@
         width: 75%;
     }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
     .sectionContent .data {
         width: 100%;
     }
