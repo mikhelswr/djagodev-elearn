@@ -94,8 +94,12 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+    height: 100px;
 }
-
+.cardTesti .cardColumn img {
+    width: auto;
+    height: 100%;
+}
 .cardTesti .name {
     font-size: 1.5rem;
     line-height: 25px;
