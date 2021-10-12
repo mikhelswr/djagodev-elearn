@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
 import dropdownKoding from "../assets/dropdown-koding.png";
@@ -9,13 +9,10 @@ import dropdownBiaya from "../assets/dropdown-biaya.png";
 import dropdownSemua from "../assets/dropdown-semua.png";
 import { IoIosArrowDown } from "react-icons/io";
 import "../styles/navbar.css";
+import "../styles/hamburgers.css";
 
 function Navbar() {
     let location = useLocation();
-
-    useEffect(() => {
-        console.log(location);
-    });
 
     const dropdown = () => {
         document.querySelector(".dropdownContent").classList.toggle("dflex");
@@ -23,11 +20,25 @@ function Navbar() {
     const removeDropdown = () => {
         document.querySelector(".dropdownContent").classList.remove("dflex");
     };
+    const toggleHamburger = () => {
+        document.querySelector(".hamburger").classList.toggle("is-active");
+        document.querySelector(".navLink").classList.toggle("activeNavLink");
+    };
+    const removeHamburger = () => {
+        document.querySelector(".hamburger").classList.remove("is-active");
+        document.querySelector(".navLink").classList.remove("activeNavLink");
+    };
 
     return (
         <nav className='navbar'>
             <div className='navMenu'>
-                <NavLink to='/' onClick={() => removeDropdown()}>
+                <NavLink
+                    to='/'
+                    onClick={() => {
+                        removeDropdown();
+                        removeHamburger();
+                    }}
+                >
                     <img className='navTitle' src={logo} alt='' />
                 </NavLink>
                 <div className='navLink'>
@@ -136,10 +147,25 @@ function Navbar() {
                         </div>
                     </div>
                     <NavLink
+                        to='/class'
+                        className='link linkMobile'
+                        activeClassName='active'
+                        onClick={() => {
+                            removeDropdown();
+                            removeHamburger();
+                        }}
+                        exact
+                    >
+                        Kelas
+                    </NavLink>
+                    <NavLink
                         to='/challenge'
                         className='link'
                         activeClassName='active'
-                        onClick={() => removeDropdown()}
+                        onClick={() => {
+                            removeDropdown();
+                            removeHamburger();
+                        }}
                         exact
                     >
                         Challenge
@@ -148,7 +174,10 @@ function Navbar() {
                         to='/event'
                         className='link'
                         activeClassName='active'
-                        onClick={() => removeDropdown()}
+                        onClick={() => {
+                            removeDropdown();
+                            removeHamburger();
+                        }}
                         exact
                     >
                         Event
@@ -157,11 +186,22 @@ function Navbar() {
                         to='/!'
                         className='link'
                         activeClassName='active'
-                        onClick={() => removeDropdown()}
+                        onClick={() => {
+                            removeDropdown();
+                            removeHamburger();
+                        }}
                         exact
                     >
                         Tentang Kami
                     </NavLink>
+                </div>
+                <div
+                    className='hamburger hamburger--slider is-active'
+                    onClick={() => toggleHamburger()}
+                >
+                    <div className='hamburger-box'>
+                        <div className='hamburger-inner'></div>
+                    </div>
                 </div>
             </div>
             <button className='button btnPrimary'>Masuk</button>

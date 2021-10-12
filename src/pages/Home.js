@@ -2,6 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Card, CardTesti } from "../components/Card";
 import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { NavLink } from "react-router-dom";
 import "swiper/swiper-bundle.min.css";
 import "../styles/pages/home.css";
 
@@ -97,12 +98,10 @@ function Home() {
                 </div>
                 <div className='sectionContent'>
                     <div className='cardContainer'>
-                        <div className='cardKelas primary'>
+                        <NavLink to='/class' className='cardKelas primary'>
                             <div className='cardHeader'>
                                 <img src={lpath} alt='' />
-                                <a href='/#'>
-                                    <IoIosArrowForward className='headerTitle' />
-                                </a>
+                                <IoIosArrowForward className='headerTitle' />
                             </div>
                             <div className='cardDescription'>
                                 <h3 className='text-bold'>Learning Path</h3>
@@ -110,13 +109,11 @@ function Home() {
                                     Belajar mudah dan terarah
                                 </p>
                             </div>
-                        </div>
-                        <div className='cardKelas '>
+                        </NavLink>
+                        <NavLink to='/class' className='cardKelas'>
                             <div className='cardHeader'>
                                 <img src={koding} alt='' />
-                                <a href='/#'>
-                                    <IoIosArrowForward className='headerTitle' />
-                                </a>
+                                <IoIosArrowForward className='headerTitle' />
                             </div>
                             <div className='cardDescription'>
                                 <h3 className='text-bold'>Kelas Koding</h3>
@@ -124,13 +121,11 @@ function Home() {
                                     Aplikasi & Website
                                 </p>
                             </div>
-                        </div>
-                        <div className='cardKelas '>
+                        </NavLink>
+                        <NavLink to='/class' className='cardKelas '>
                             <div className='cardHeader'>
                                 <img src={desain} alt='' />
-                                <a href='/#'>
-                                    <IoIosArrowForward className='headerTitle' />
-                                </a>
+                                <IoIosArrowForward className='headerTitle' />
                             </div>
                             <div className='cardDescription'>
                                 <h3 className='text-bold'>Kelas Desain</h3>
@@ -138,13 +133,11 @@ function Home() {
                                     Desain Grafis & UI/UX
                                 </p>
                             </div>
-                        </div>
-                        <div className='cardKelas '>
+                        </NavLink>
+                        <NavLink to='/class' className='cardKelas '>
                             <div className='cardHeader'>
                                 <img src={bahasa} alt='' />
-                                <a href='/#'>
-                                    <IoIosArrowForward className='headerTitle' />
-                                </a>
+                                <IoIosArrowForward className='headerTitle' />
                             </div>
                             <div className='cardDescription'>
                                 <h3 className='text-bold'>Kelas Bahasa</h3>
@@ -152,7 +145,7 @@ function Home() {
                                     Inggris, Jepang & Korea
                                 </p>
                             </div>
-                        </div>
+                        </NavLink>
                     </div>
                 </div>
             </section>
