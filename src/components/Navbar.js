@@ -196,7 +196,7 @@ function Navbar() {
                     </NavLink>
                 </div>
                 <div
-                    className='hamburger hamburger--slider is-active'
+                    className='hamburger hamburger--slider'
                     onClick={() => toggleHamburger()}
                 >
                     <div className='hamburger-box'>
