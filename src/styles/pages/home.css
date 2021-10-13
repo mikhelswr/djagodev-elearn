@@ -28,8 +28,8 @@
     justify-content: flex-end;
 }
 .headerImage img {
-    width: fit-content;
-    height: 100%;
+    width: 100%;
+    height: auto;
 }
 @media (max-width: 1050px) {
     .header {
