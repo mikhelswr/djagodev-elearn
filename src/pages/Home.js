@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Card, CardTesti } from "../components/Card";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowRight, IoIosArrowForward } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import "swiper/swiper-bundle.min.css";
 import "../styles/pages/home.css";
@@ -44,14 +44,14 @@ function Home() {
                     <h1 className='headerTitle'>
                         KUASAI SKILL IMPIAN HANYA DALAM 3 BULAN
                     </h1>
-                    <p className='description font-description'>
+                    <p className='description font-description font-bold'>
                         Belajar terarah, jadi profresional bukanlah sekedar
                         mimpi. Kamu tak akan kehilangan arah, pilih learning
                         path dan jadilah profresional
                     </p>
                     <button className='button btnSecondary'>
                         Akses 3 Bulan GRATIS!{" "}
-                        <IoIosArrowDown className='icon' />
+                        <IoIosArrowForward className='icon' />
                     </button>
                 </div>
                 <div className='headerImage'>
