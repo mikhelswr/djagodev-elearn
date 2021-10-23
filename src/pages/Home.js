@@ -44,7 +44,7 @@ function Home() {
                     <h1 className='headerTitle'>
                         KUASAI SKILL IMPIAN HANYA DALAM 3 BULAN
                     </h1>
-                    <p className='description font-description font-bold'>
+                    <p className='description font-description font-medium'>
                         Belajar terarah, jadi profresional bukanlah sekedar
                         mimpi. Kamu tak akan kehilangan arah, pilih learning
                         path dan jadilah profresional
