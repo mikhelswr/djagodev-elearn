@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Card, CardTesti } from "../components/Card";
-import { IoIosArrowDown, IoIosArrowForward } from "react-icons/io";
+import { IoIosArrowForward } from "react-icons/io";
 import { NavLink } from "react-router-dom";
 import "swiper/swiper-bundle.min.css";
 import "../styles/pages/home.css";
